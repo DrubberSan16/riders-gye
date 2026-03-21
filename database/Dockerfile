@@ -1,0 +1,7 @@
+FROM postgres:16-alpine
+
+ENV TZ=America/Guayaquil
+
+COPY ./init /docker-entrypoint-initdb.d
+
+RUN chmod -R 755 /docker-entrypoint-initdb.d

@@ -1,0 +1,936 @@
+{
+  "estados": [
+    {
+      "id": 1,
+      "nombre": "pendiente"
+    },
+    {
+      "id": 2,
+      "nombre": "en_curso"
+    },
+    {
+      "id": 3,
+      "nombre": "completada"
+    },
+    {
+      "id": 4,
+      "nombre": "cancelada"
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "nombre": "Rookie",
+      "entregas_minimas": 0,
+      "calificacion_minima": 0,
+      "comision_porcentaje": 5.0
+    },
+    {
+      "id": 2,
+      "nombre": "Semi-Pro",
+      "entregas_minimas": 50,
+      "calificacion_minima": 3.5,
+      "comision_porcentaje": 8.5
+    },
+    {
+      "id": 3,
+      "nombre": "Pro",
+      "entregas_minimas": 150,
+      "calificacion_minima": 4.0,
+      "comision_porcentaje": 12.0
+    },
+    {
+      "id": 4,
+      "nombre": "Elite",
+      "entregas_minimas": 300,
+      "calificacion_minima": 4.5,
+      "comision_porcentaje": 15.0
+    }
+  ],
+  "riders": [
+    {
+      "id": 1,
+      "nombre": "Carlos Mendez",
+      "email": "carlos.mendez@mail.com",
+      "telefono": "0991234567",
+      "zona": "Norte",
+      "categoria": "Elite",
+      "fecha_ingreso": "2024-06-15"
+    },
+    {
+      "id": 2,
+      "nombre": "Maria Lopez",
+      "email": "maria.lopez@mail.com",
+      "telefono": "0997654321",
+      "zona": "Sur",
+      "categoria": "Pro",
+      "fecha_ingreso": "2024-09-01"
+    },
+    {
+      "id": 3,
+      "nombre": "Juan Torres",
+      "email": "juan.torres@mail.com",
+      "telefono": "0993456789",
+      "zona": "Centro",
+      "categoria": "Semi-Pro",
+      "fecha_ingreso": "2025-01-10"
+    },
+    {
+      "id": 4,
+      "nombre": "Ana Ruiz",
+      "email": "ana.ruiz@mail.com",
+      "telefono": "0994567890",
+      "zona": "Norte",
+      "categoria": "Rookie",
+      "fecha_ingreso": "2025-11-20"
+    },
+    {
+      "id": 5,
+      "nombre": "Pedro Vega",
+      "email": "pedro.vega@mail.com",
+      "telefono": "0995678901",
+      "zona": "Sur",
+      "categoria": "Pro",
+      "fecha_ingreso": "2024-08-05"
+    },
+    {
+      "id": 6,
+      "nombre": "Lucia Fernandez",
+      "email": "lucia.fernandez@mail.com",
+      "telefono": "0996789012",
+      "zona": "Centro",
+      "categoria": "Elite",
+      "fecha_ingreso": "2024-03-12"
+    },
+    {
+      "id": 7,
+      "nombre": "Diego Paredes",
+      "email": "diego.paredes@mail.com",
+      "telefono": "0997890123",
+      "zona": "Norte",
+      "categoria": "Semi-Pro",
+      "fecha_ingreso": "2025-04-18"
+    },
+    {
+      "id": 8,
+      "nombre": "Sofia Castro",
+      "email": "sofia.castro@mail.com",
+      "telefono": "0998901234",
+      "zona": "Sur",
+      "categoria": "Rookie",
+      "fecha_ingreso": "2026-01-05"
+    },
+    {
+      "id": 9,
+      "nombre": "Roberto Alvarado",
+      "email": "roberto.alvarado@mail.com",
+      "telefono": "0992345678",
+      "zona": "Centro",
+      "categoria": "Pro",
+      "fecha_ingreso": "2024-11-22"
+    },
+    {
+      "id": 10,
+      "nombre": "Valentina Moran",
+      "email": "valentina.moran@mail.com",
+      "telefono": "0993456701",
+      "zona": "Norte",
+      "categoria": "Semi-Pro",
+      "fecha_ingreso": "2025-06-30"
+    }
+  ],
+  "entregas": [
+    {
+      "rider_email": "carlos.mendez@mail.com",
+      "descripcion": "Combo familiar pollo",
+      "valor": 25.5,
+      "estado": "completada",
+      "calificacion": 4.8,
+      "fecha_creacion": "2026-02-18T10:30:00"
+    },
+    {
+      "rider_email": "carlos.mendez@mail.com",
+      "descripcion": "Pizza grande + bebidas",
+      "valor": 18.75,
+      "estado": "completada",
+      "calificacion": 5.0,
+      "fecha_creacion": "2026-02-19T12:15:00"
+    },
+    {
+      "rider_email": "carlos.mendez@mail.com",
+      "descripcion": "Sushi 30 piezas",
+      "valor": 42.0,
+      "estado": "completada",
+      "calificacion": 4.5,
+      "fecha_creacion": "2026-02-20T19:45:00"
+    },
+    {
+      "rider_email": "carlos.mendez@mail.com",
+      "descripcion": "Hamburguesas x3",
+      "valor": 22.3,
+      "estado": "completada",
+      "calificacion": 4.9,
+      "fecha_creacion": "2026-02-22T11:00:00"
+    },
+    {
+      "rider_email": "carlos.mendez@mail.com",
+      "descripcion": "Wrap integral",
+      "valor": 9.8,
+      "estado": "completada",
+      "calificacion": 4.7,
+      "fecha_creacion": "2026-02-25T08:30:00"
+    },
+    {
+      "rider_email": "carlos.mendez@mail.com",
+      "descripcion": "Tacos al pastor x6",
+      "valor": 14.5,
+      "estado": "completada",
+      "calificacion": 5.0,
+      "fecha_creacion": "2026-02-27T20:00:00"
+    },
+    {
+      "rider_email": "carlos.mendez@mail.com",
+      "descripcion": "Ensalada cesar grande",
+      "valor": 11.25,
+      "estado": "completada",
+      "calificacion": 4.6,
+      "fecha_creacion": "2026-03-01T12:30:00"
+    },
+    {
+      "rider_email": "carlos.mendez@mail.com",
+      "descripcion": "Pollo asado entero",
+      "valor": 16.0,
+      "estado": "completada",
+      "calificacion": 4.8,
+      "fecha_creacion": "2026-03-03T18:00:00"
+    },
+    {
+      "rider_email": "carlos.mendez@mail.com",
+      "descripcion": "Churrasco completo",
+      "valor": 19.5,
+      "estado": "completada",
+      "calificacion": 5.0,
+      "fecha_creacion": "2026-03-05T13:15:00"
+    },
+    {
+      "rider_email": "carlos.mendez@mail.com",
+      "descripcion": "Ceviche de camaron",
+      "valor": 15.0,
+      "estado": "completada",
+      "calificacion": 4.4,
+      "fecha_creacion": "2026-03-07T14:00:00"
+    },
+    {
+      "rider_email": "carlos.mendez@mail.com",
+      "descripcion": "Bandeja paisa",
+      "valor": 13.75,
+      "estado": "completada",
+      "calificacion": 4.9,
+      "fecha_creacion": "2026-03-09T12:00:00"
+    },
+    {
+      "rider_email": "carlos.mendez@mail.com",
+      "descripcion": "Lomo saltado",
+      "valor": 17.25,
+      "estado": "completada",
+      "calificacion": 4.7,
+      "fecha_creacion": "2026-03-11T19:30:00"
+    },
+    {
+      "rider_email": "carlos.mendez@mail.com",
+      "descripcion": "Empanadas x12",
+      "valor": 8.4,
+      "estado": "completada",
+      "calificacion": 5.0,
+      "fecha_creacion": "2026-03-13T10:00:00"
+    },
+    {
+      "rider_email": "carlos.mendez@mail.com",
+      "descripcion": "Parrillada mixta",
+      "valor": 35.0,
+      "estado": "en_curso",
+      "calificacion": null,
+      "fecha_creacion": "2026-03-17T09:00:00"
+    },
+    {
+      "rider_email": "carlos.mendez@mail.com",
+      "descripcion": "Helado 1L",
+      "valor": 7.5,
+      "estado": "pendiente",
+      "calificacion": null,
+      "fecha_creacion": "2026-03-17T09:30:00"
+    },
+    {
+      "rider_email": "maria.lopez@mail.com",
+      "descripcion": "Almuerzo ejecutivo",
+      "valor": 8.5,
+      "estado": "completada",
+      "calificacion": 4.2,
+      "fecha_creacion": "2026-02-17T12:00:00"
+    },
+    {
+      "rider_email": "maria.lopez@mail.com",
+      "descripcion": "Ensalada premium",
+      "valor": 12.0,
+      "estado": "completada",
+      "calificacion": 3.8,
+      "fecha_creacion": "2026-02-20T13:30:00"
+    },
+    {
+      "rider_email": "maria.lopez@mail.com",
+      "descripcion": "Tacos mexicanos",
+      "valor": 15.0,
+      "estado": "cancelada",
+      "calificacion": null,
+      "fecha_creacion": "2026-02-23T18:00:00"
+    },
+    {
+      "rider_email": "maria.lopez@mail.com",
+      "descripcion": "Arroz marinero",
+      "valor": 14.0,
+      "estado": "completada",
+      "calificacion": 4.0,
+      "fecha_creacion": "2026-02-26T12:45:00"
+    },
+    {
+      "rider_email": "maria.lopez@mail.com",
+      "descripcion": "Lasagna familiar",
+      "valor": 18.5,
+      "estado": "completada",
+      "calificacion": 4.5,
+      "fecha_creacion": "2026-03-01T13:00:00"
+    },
+    {
+      "rider_email": "maria.lopez@mail.com",
+      "descripcion": "Sandwich club x2",
+      "valor": 11.0,
+      "estado": "completada",
+      "calificacion": 3.9,
+      "fecha_creacion": "2026-03-04T11:30:00"
+    },
+    {
+      "rider_email": "maria.lopez@mail.com",
+      "descripcion": "Poke bowl",
+      "valor": 13.5,
+      "estado": "completada",
+      "calificacion": 4.1,
+      "fecha_creacion": "2026-03-07T14:15:00"
+    },
+    {
+      "rider_email": "maria.lopez@mail.com",
+      "descripcion": "Burrito supreme",
+      "valor": 10.25,
+      "estado": "completada",
+      "calificacion": 4.3,
+      "fecha_creacion": "2026-03-10T20:00:00"
+    },
+    {
+      "rider_email": "maria.lopez@mail.com",
+      "descripcion": "Menestra con carne",
+      "valor": 7.5,
+      "estado": "completada",
+      "calificacion": 3.7,
+      "fecha_creacion": "2026-03-13T12:30:00"
+    },
+    {
+      "rider_email": "maria.lopez@mail.com",
+      "descripcion": "Tilapia frita",
+      "valor": 9.0,
+      "estado": "completada",
+      "calificacion": 4.0,
+      "fecha_creacion": "2026-03-15T13:00:00"
+    },
+    {
+      "rider_email": "maria.lopez@mail.com",
+      "descripcion": "Corvina apanada",
+      "valor": 16.0,
+      "estado": "en_curso",
+      "calificacion": null,
+      "fecha_creacion": "2026-03-17T12:00:00"
+    },
+    {
+      "rider_email": "juan.torres@mail.com",
+      "descripcion": "Cafe y pasteles",
+      "valor": 9.25,
+      "estado": "completada",
+      "calificacion": 3.5,
+      "fecha_creacion": "2026-02-18T08:00:00"
+    },
+    {
+      "rider_email": "juan.torres@mail.com",
+      "descripcion": "Wrap de pollo",
+      "valor": 7.8,
+      "estado": "completada",
+      "calificacion": 3.0,
+      "fecha_creacion": "2026-02-22T11:00:00"
+    },
+    {
+      "rider_email": "juan.torres@mail.com",
+      "descripcion": "Jugo verde 1L",
+      "valor": 4.5,
+      "estado": "completada",
+      "calificacion": 3.8,
+      "fecha_creacion": "2026-02-25T07:45:00"
+    },
+    {
+      "rider_email": "juan.torres@mail.com",
+      "descripcion": "Tostada con aguacate",
+      "valor": 6.0,
+      "estado": "completada",
+      "calificacion": 3.2,
+      "fecha_creacion": "2026-03-01T08:30:00"
+    },
+    {
+      "rider_email": "juan.torres@mail.com",
+      "descripcion": "Granola con yogurt",
+      "valor": 5.5,
+      "estado": "completada",
+      "calificacion": 3.6,
+      "fecha_creacion": "2026-03-05T09:00:00"
+    },
+    {
+      "rider_email": "juan.torres@mail.com",
+      "descripcion": "Croissant jamon queso",
+      "valor": 4.25,
+      "estado": "completada",
+      "calificacion": 2.8,
+      "fecha_creacion": "2026-03-08T07:30:00"
+    },
+    {
+      "rider_email": "juan.torres@mail.com",
+      "descripcion": "Smoothie tropical",
+      "valor": 5.0,
+      "estado": "cancelada",
+      "calificacion": null,
+      "fecha_creacion": "2026-03-10T10:00:00"
+    },
+    {
+      "rider_email": "juan.torres@mail.com",
+      "descripcion": "Batidos x2",
+      "valor": 6.5,
+      "estado": "pendiente",
+      "calificacion": null,
+      "fecha_creacion": "2026-03-17T07:30:00"
+    },
+    {
+      "rider_email": "ana.ruiz@mail.com",
+      "descripcion": "Ceviche mixto",
+      "valor": 14.0,
+      "estado": "completada",
+      "calificacion": 4.0,
+      "fecha_creacion": "2026-03-01T14:00:00"
+    },
+    {
+      "rider_email": "ana.ruiz@mail.com",
+      "descripcion": "Encebollado",
+      "valor": 5.5,
+      "estado": "completada",
+      "calificacion": 2.5,
+      "fecha_creacion": "2026-03-05T09:30:00"
+    },
+    {
+      "rider_email": "ana.ruiz@mail.com",
+      "descripcion": "Bollon de verde",
+      "valor": 4.0,
+      "estado": "completada",
+      "calificacion": 3.5,
+      "fecha_creacion": "2026-03-08T08:00:00"
+    },
+    {
+      "rider_email": "ana.ruiz@mail.com",
+      "descripcion": "Seco de pollo",
+      "valor": 6.5,
+      "estado": "completada",
+      "calificacion": 4.2,
+      "fecha_creacion": "2026-03-11T12:30:00"
+    },
+    {
+      "rider_email": "ana.ruiz@mail.com",
+      "descripcion": "Arroz con camarones",
+      "valor": 12.0,
+      "estado": "cancelada",
+      "calificacion": null,
+      "fecha_creacion": "2026-03-13T13:00:00"
+    },
+    {
+      "rider_email": "ana.ruiz@mail.com",
+      "descripcion": "Tigrillo",
+      "valor": 5.0,
+      "estado": "completada",
+      "calificacion": 3.8,
+      "fecha_creacion": "2026-03-15T07:00:00"
+    },
+    {
+      "rider_email": "ana.ruiz@mail.com",
+      "descripcion": "Guatita",
+      "valor": 7.0,
+      "estado": "pendiente",
+      "calificacion": null,
+      "fecha_creacion": "2026-03-17T11:00:00"
+    },
+    {
+      "rider_email": "pedro.vega@mail.com",
+      "descripcion": "Parrillada completa",
+      "valor": 35.0,
+      "estado": "completada",
+      "calificacion": 4.7,
+      "fecha_creacion": "2026-02-16T20:00:00"
+    },
+    {
+      "rider_email": "pedro.vega@mail.com",
+      "descripcion": "Alitas BBQ x20",
+      "valor": 16.5,
+      "estado": "completada",
+      "calificacion": 4.3,
+      "fecha_creacion": "2026-02-19T19:00:00"
+    },
+    {
+      "rider_email": "pedro.vega@mail.com",
+      "descripcion": "Costillas ahumadas",
+      "valor": 28.0,
+      "estado": "completada",
+      "calificacion": 4.0,
+      "fecha_creacion": "2026-02-22T21:00:00"
+    },
+    {
+      "rider_email": "pedro.vega@mail.com",
+      "descripcion": "Chorizo artesanal x6",
+      "valor": 12.0,
+      "estado": "completada",
+      "calificacion": 4.5,
+      "fecha_creacion": "2026-02-25T18:30:00"
+    },
+    {
+      "rider_email": "pedro.vega@mail.com",
+      "descripcion": "Pincho mixto x4",
+      "valor": 10.0,
+      "estado": "completada",
+      "calificacion": 4.1,
+      "fecha_creacion": "2026-02-28T19:45:00"
+    },
+    {
+      "rider_email": "pedro.vega@mail.com",
+      "descripcion": "Hamburguesa doble",
+      "valor": 11.5,
+      "estado": "completada",
+      "calificacion": 4.6,
+      "fecha_creacion": "2026-03-02T20:30:00"
+    },
+    {
+      "rider_email": "pedro.vega@mail.com",
+      "descripcion": "Nachos supreme",
+      "valor": 9.75,
+      "estado": "completada",
+      "calificacion": 3.9,
+      "fecha_creacion": "2026-03-05T21:00:00"
+    },
+    {
+      "rider_email": "pedro.vega@mail.com",
+      "descripcion": "Pizza pepperoni XL",
+      "valor": 22.0,
+      "estado": "completada",
+      "calificacion": 4.4,
+      "fecha_creacion": "2026-03-08T19:00:00"
+    },
+    {
+      "rider_email": "pedro.vega@mail.com",
+      "descripcion": "Hot dog premium x3",
+      "valor": 8.25,
+      "estado": "completada",
+      "calificacion": 4.2,
+      "fecha_creacion": "2026-03-11T18:00:00"
+    },
+    {
+      "rider_email": "pedro.vega@mail.com",
+      "descripcion": "Bife de chorizo",
+      "valor": 19.0,
+      "estado": "completada",
+      "calificacion": 4.8,
+      "fecha_creacion": "2026-03-14T20:00:00"
+    },
+    {
+      "rider_email": "pedro.vega@mail.com",
+      "descripcion": "Milanesa napolitana",
+      "valor": 15.5,
+      "estado": "en_curso",
+      "calificacion": null,
+      "fecha_creacion": "2026-03-17T19:00:00"
+    },
+    {
+      "rider_email": "lucia.fernandez@mail.com",
+      "descripcion": "Desayuno continental",
+      "valor": 11.0,
+      "estado": "completada",
+      "calificacion": 5.0,
+      "fecha_creacion": "2026-02-17T07:00:00"
+    },
+    {
+      "rider_email": "lucia.fernandez@mail.com",
+      "descripcion": "Pasta carbonara",
+      "valor": 13.5,
+      "estado": "completada",
+      "calificacion": 4.9,
+      "fecha_creacion": "2026-02-20T13:00:00"
+    },
+    {
+      "rider_email": "lucia.fernandez@mail.com",
+      "descripcion": "Risotto de mariscos",
+      "valor": 19.0,
+      "estado": "completada",
+      "calificacion": 4.8,
+      "fecha_creacion": "2026-02-23T14:00:00"
+    },
+    {
+      "rider_email": "lucia.fernandez@mail.com",
+      "descripcion": "Filete de salmon",
+      "valor": 24.0,
+      "estado": "completada",
+      "calificacion": 5.0,
+      "fecha_creacion": "2026-02-26T19:30:00"
+    },
+    {
+      "rider_email": "lucia.fernandez@mail.com",
+      "descripcion": "Ravioles de ricotta",
+      "valor": 14.5,
+      "estado": "completada",
+      "calificacion": 4.7,
+      "fecha_creacion": "2026-03-01T12:00:00"
+    },
+    {
+      "rider_email": "lucia.fernandez@mail.com",
+      "descripcion": "Carpaccio de res",
+      "valor": 17.0,
+      "estado": "completada",
+      "calificacion": 5.0,
+      "fecha_creacion": "2026-03-04T13:30:00"
+    },
+    {
+      "rider_email": "lucia.fernandez@mail.com",
+      "descripcion": "Tiramisu x2",
+      "valor": 9.0,
+      "estado": "completada",
+      "calificacion": 4.9,
+      "fecha_creacion": "2026-03-07T15:00:00"
+    },
+    {
+      "rider_email": "lucia.fernandez@mail.com",
+      "descripcion": "Bruschetta italiana",
+      "valor": 8.5,
+      "estado": "completada",
+      "calificacion": 4.6,
+      "fecha_creacion": "2026-03-10T11:00:00"
+    },
+    {
+      "rider_email": "lucia.fernandez@mail.com",
+      "descripcion": "Ossobuco",
+      "valor": 21.0,
+      "estado": "completada",
+      "calificacion": 5.0,
+      "fecha_creacion": "2026-03-13T20:00:00"
+    },
+    {
+      "rider_email": "lucia.fernandez@mail.com",
+      "descripcion": "Panna cotta",
+      "valor": 7.5,
+      "estado": "completada",
+      "calificacion": 4.8,
+      "fecha_creacion": "2026-03-15T16:00:00"
+    },
+    {
+      "rider_email": "lucia.fernandez@mail.com",
+      "descripcion": "Gnocchi al pesto",
+      "valor": 12.5,
+      "estado": "en_curso",
+      "calificacion": null,
+      "fecha_creacion": "2026-03-17T12:00:00"
+    },
+    {
+      "rider_email": "diego.paredes@mail.com",
+      "descripcion": "Empanadas x6",
+      "valor": 4.8,
+      "estado": "completada",
+      "calificacion": 3.7,
+      "fecha_creacion": "2026-02-20T16:00:00"
+    },
+    {
+      "rider_email": "diego.paredes@mail.com",
+      "descripcion": "Jugo natural 1L",
+      "valor": 3.5,
+      "estado": "cancelada",
+      "calificacion": null,
+      "fecha_creacion": "2026-02-24T10:00:00"
+    },
+    {
+      "rider_email": "diego.paredes@mail.com",
+      "descripcion": "Shawarma de pollo",
+      "valor": 8.0,
+      "estado": "completada",
+      "calificacion": 4.0,
+      "fecha_creacion": "2026-02-27T14:30:00"
+    },
+    {
+      "rider_email": "diego.paredes@mail.com",
+      "descripcion": "Falafel wrap",
+      "valor": 7.5,
+      "estado": "completada",
+      "calificacion": 3.5,
+      "fecha_creacion": "2026-03-02T13:00:00"
+    },
+    {
+      "rider_email": "diego.paredes@mail.com",
+      "descripcion": "Hummus con pan pita",
+      "valor": 6.0,
+      "estado": "completada",
+      "calificacion": 3.8,
+      "fecha_creacion": "2026-03-06T12:00:00"
+    },
+    {
+      "rider_email": "diego.paredes@mail.com",
+      "descripcion": "Kebab mixto",
+      "valor": 9.5,
+      "estado": "completada",
+      "calificacion": 4.1,
+      "fecha_creacion": "2026-03-09T19:00:00"
+    },
+    {
+      "rider_email": "diego.paredes@mail.com",
+      "descripcion": "Tabule",
+      "valor": 5.5,
+      "estado": "completada",
+      "calificacion": 3.3,
+      "fecha_creacion": "2026-03-12T11:30:00"
+    },
+    {
+      "rider_email": "diego.paredes@mail.com",
+      "descripcion": "Baklava x4",
+      "valor": 6.0,
+      "estado": "completada",
+      "calificacion": 4.2,
+      "fecha_creacion": "2026-03-15T15:00:00"
+    },
+    {
+      "rider_email": "diego.paredes@mail.com",
+      "descripcion": "Gyros de cordero",
+      "valor": 10.0,
+      "estado": "pendiente",
+      "calificacion": null,
+      "fecha_creacion": "2026-03-17T13:00:00"
+    },
+    {
+      "rider_email": "sofia.castro@mail.com",
+      "descripcion": "Helado artesanal",
+      "valor": 6.0,
+      "estado": "completada",
+      "calificacion": 4.5,
+      "fecha_creacion": "2026-03-05T15:00:00"
+    },
+    {
+      "rider_email": "sofia.castro@mail.com",
+      "descripcion": "Crepe de nutella",
+      "valor": 5.5,
+      "estado": "completada",
+      "calificacion": 4.0,
+      "fecha_creacion": "2026-03-08T16:30:00"
+    },
+    {
+      "rider_email": "sofia.castro@mail.com",
+      "descripcion": "Waffle con frutas",
+      "valor": 7.0,
+      "estado": "completada",
+      "calificacion": 3.5,
+      "fecha_creacion": "2026-03-11T10:00:00"
+    },
+    {
+      "rider_email": "sofia.castro@mail.com",
+      "descripcion": "Churros con chocolate",
+      "valor": 4.5,
+      "estado": "cancelada",
+      "calificacion": null,
+      "fecha_creacion": "2026-03-13T17:00:00"
+    },
+    {
+      "rider_email": "sofia.castro@mail.com",
+      "descripcion": "Brownie con helado",
+      "valor": 6.5,
+      "estado": "completada",
+      "calificacion": 4.8,
+      "fecha_creacion": "2026-03-15T14:00:00"
+    },
+    {
+      "rider_email": "sofia.castro@mail.com",
+      "descripcion": "Milkshake oreo",
+      "valor": 5.0,
+      "estado": "pendiente",
+      "calificacion": null,
+      "fecha_creacion": "2026-03-17T16:00:00"
+    },
+    {
+      "rider_email": "roberto.alvarado@mail.com",
+      "descripcion": "Pollo broaster x8",
+      "valor": 18.0,
+      "estado": "completada",
+      "calificacion": 4.3,
+      "fecha_creacion": "2026-02-16T12:00:00"
+    },
+    {
+      "rider_email": "roberto.alvarado@mail.com",
+      "descripcion": "Arroz chaufa",
+      "valor": 10.5,
+      "estado": "completada",
+      "calificacion": 4.0,
+      "fecha_creacion": "2026-02-19T13:00:00"
+    },
+    {
+      "rider_email": "roberto.alvarado@mail.com",
+      "descripcion": "Lomo saltado especial",
+      "valor": 15.0,
+      "estado": "completada",
+      "calificacion": 4.5,
+      "fecha_creacion": "2026-02-22T19:30:00"
+    },
+    {
+      "rider_email": "roberto.alvarado@mail.com",
+      "descripcion": "Tallarin saltado",
+      "valor": 9.5,
+      "estado": "completada",
+      "calificacion": 4.1,
+      "fecha_creacion": "2026-02-25T12:30:00"
+    },
+    {
+      "rider_email": "roberto.alvarado@mail.com",
+      "descripcion": "Aeropuerto especial",
+      "valor": 11.0,
+      "estado": "completada",
+      "calificacion": 3.9,
+      "fecha_creacion": "2026-02-28T13:00:00"
+    },
+    {
+      "rider_email": "roberto.alvarado@mail.com",
+      "descripcion": "Cau cau",
+      "valor": 8.5,
+      "estado": "completada",
+      "calificacion": 4.2,
+      "fecha_creacion": "2026-03-03T12:00:00"
+    },
+    {
+      "rider_email": "roberto.alvarado@mail.com",
+      "descripcion": "Aji de gallina",
+      "valor": 9.0,
+      "estado": "completada",
+      "calificacion": 4.4,
+      "fecha_creacion": "2026-03-06T13:15:00"
+    },
+    {
+      "rider_email": "roberto.alvarado@mail.com",
+      "descripcion": "Papa a la huancaina",
+      "valor": 6.5,
+      "estado": "completada",
+      "calificacion": 4.6,
+      "fecha_creacion": "2026-03-09T11:00:00"
+    },
+    {
+      "rider_email": "roberto.alvarado@mail.com",
+      "descripcion": "Anticuchos x4",
+      "valor": 12.0,
+      "estado": "completada",
+      "calificacion": 4.0,
+      "fecha_creacion": "2026-03-12T19:00:00"
+    },
+    {
+      "rider_email": "roberto.alvarado@mail.com",
+      "descripcion": "Causa limena",
+      "valor": 8.0,
+      "estado": "completada",
+      "calificacion": 4.3,
+      "fecha_creacion": "2026-03-15T14:30:00"
+    },
+    {
+      "rider_email": "roberto.alvarado@mail.com",
+      "descripcion": "Suspiro limeno x2",
+      "valor": 7.0,
+      "estado": "en_curso",
+      "calificacion": null,
+      "fecha_creacion": "2026-03-17T15:00:00"
+    },
+    {
+      "rider_email": "valentina.moran@mail.com",
+      "descripcion": "Pad thai",
+      "valor": 12.0,
+      "estado": "completada",
+      "calificacion": 3.8,
+      "fecha_creacion": "2026-02-18T13:00:00"
+    },
+    {
+      "rider_email": "valentina.moran@mail.com",
+      "descripcion": "Ramen tonkotsu",
+      "valor": 14.5,
+      "estado": "completada",
+      "calificacion": 4.2,
+      "fecha_creacion": "2026-02-21T19:00:00"
+    },
+    {
+      "rider_email": "valentina.moran@mail.com",
+      "descripcion": "Gyozas x8",
+      "valor": 8.0,
+      "estado": "completada",
+      "calificacion": 3.5,
+      "fecha_creacion": "2026-02-24T12:30:00"
+    },
+    {
+      "rider_email": "valentina.moran@mail.com",
+      "descripcion": "Curry verde con arroz",
+      "valor": 11.5,
+      "estado": "completada",
+      "calificacion": 4.0,
+      "fecha_creacion": "2026-02-27T13:45:00"
+    },
+    {
+      "rider_email": "valentina.moran@mail.com",
+      "descripcion": "Spring rolls x6",
+      "valor": 6.5,
+      "estado": "completada",
+      "calificacion": 3.6,
+      "fecha_creacion": "2026-03-02T11:00:00"
+    },
+    {
+      "rider_email": "valentina.moran@mail.com",
+      "descripcion": "Teriyaki chicken bowl",
+      "valor": 13.0,
+      "estado": "completada",
+      "calificacion": 4.1,
+      "fecha_creacion": "2026-03-05T12:30:00"
+    },
+    {
+      "rider_email": "valentina.moran@mail.com",
+      "descripcion": "Sashimi variado",
+      "valor": 22.0,
+      "estado": "completada",
+      "calificacion": 3.4,
+      "fecha_creacion": "2026-03-08T19:30:00"
+    },
+    {
+      "rider_email": "valentina.moran@mail.com",
+      "descripcion": "Udon de mariscos",
+      "valor": 15.0,
+      "estado": "completada",
+      "calificacion": 3.9,
+      "fecha_creacion": "2026-03-11T13:00:00"
+    },
+    {
+      "rider_email": "valentina.moran@mail.com",
+      "descripcion": "Tempura mixto",
+      "valor": 10.0,
+      "estado": "cancelada",
+      "calificacion": null,
+      "fecha_creacion": "2026-03-14T18:00:00"
+    },
+    {
+      "rider_email": "valentina.moran@mail.com",
+      "descripcion": "Mochi x6",
+      "valor": 7.5,
+      "estado": "completada",
+      "calificacion": 4.3,
+      "fecha_creacion": "2026-03-16T15:00:00"
+    }
+  ]
+}
