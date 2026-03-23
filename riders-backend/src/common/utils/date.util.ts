@@ -5,7 +5,7 @@ export function resolveReferenceDate(value?: string): Date {
 
   const parsed = new Date(value);
   if (Number.isNaN(parsed.getTime())) {
-    throw new Error('La fecha de referencia no tiene un formato valido');
+    throw new Error('La fecha límite no tiene un formato valido');
   }
 
   return parsed;

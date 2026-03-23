@@ -1,0 +1,34 @@
+services:
+  postgres:
+    extends:
+      file: ./database/docker-compose.yml
+      service: postgres
+    networks:
+      - riders-network
+
+  backend:
+    extends:
+      file: ./riders-backend/docker-compose.yml
+      service: backend
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - riders-network
+
+  frontend:
+    extends:
+      file: ./riders-frontend/docker-compose.yml
+      service: frontend
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - riders-network
+
+networks:
+  riders-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

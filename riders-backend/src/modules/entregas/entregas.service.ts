@@ -78,11 +78,14 @@ export class EntregasService {
       throw new BadRequestException(`No se puede modificar una entrega en estado ${detail.estado}`);
     }
 
+    const estadoActual = detail.estado;
     const estadoDestino = await this.resolveEstadoNombre(dto.estadoId);
 
     if (!estadoDestino) {
       throw new NotFoundException(`No existe el estado destino con id ${dto.estadoId}`);
     }
+
+    this.validateStatusTransition(estadoActual, estadoDestino);
 
     if (estadoDestino === 'completada' && dto.calificacion == null) {
       throw new BadRequestException('La calificacion es obligatoria para completar una entrega');
@@ -92,15 +95,47 @@ export class EntregasService {
       throw new BadRequestException('La calificacion solo se registra cuando la entrega se completa');
     }
 
-    entity.estadoId = dto.estadoId;
-    entity.calificacion = dto.calificacion ?? null;
+    if (dto.calificacion != null && (dto.calificacion < 0 || dto.calificacion > 5)) {
+      throw new BadRequestException('La calificacion debe estar entre 0 y 5');
+    }
 
-    const saved = await this.entregaRepository.save(entity);
-    return {
-      success: true,
-      message: 'Estado de entrega actualizado correctamente',
-      data: await this.entregaRepository.findOneDetail(saved.id!),
+    entity.estadoId = dto.estadoId;
+    entity.calificacion = estadoDestino === 'completada' ? dto.calificacion! : null;
+
+    try {
+      const saved = await this.entregaRepository.save(entity);
+      return {
+        success: true,
+        message: 'Estado de entrega actualizado correctamente',
+        data: await this.entregaRepository.findOneDetail(saved.id!),
+      };
+    } catch (error) {
+      this.handleDatabaseBusinessError(error);
+      throw error;
+    }
+  }
+
+    private validateStatusTransition(estadoActual: string, estadoDestino: string) {
+    const transitions: Record<string, string[]> = {
+      pendiente: ['en_curso', 'cancelada'],
+      en_curso: ['completada', 'cancelada'],
     };
+
+    const allowedDestinations = transitions[estadoActual] ?? [];
+
+    if (!allowedDestinations.includes(estadoDestino)) {
+      throw new BadRequestException(
+        `Transicion invalida: no se puede pasar de ${estadoActual} a ${estadoDestino}`,
+      );
+    }
+  }
+
+  private handleDatabaseBusinessError(error: any) {
+    const driverError = error?.driverError;
+
+    if (driverError?.code === 'P0001') {
+      throw new BadRequestException(driverError.message);
+    }
   }
 
   private async ensureRiderExists(riderId: number) {
